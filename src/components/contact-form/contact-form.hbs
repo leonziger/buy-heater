@@ -1,0 +1,35 @@
+<form class="contact-form"
+      id="app"
+      @submit="checkForm"
+      action="https://vuejs.org/"
+      method="post"
+      novalidate="true">
+    <div class="contact-form__left-part">
+        <input class="contact-form__field" name="name" placeholder="Ваше Имя" autocomplete="off" v-model="name" >
+        <input name="phone"
+               type="tel"
+               placeholder="+380 (__) ___-__-__"
+               autocomplete="off"
+               class="contact-form__field" v-model="phone">
+        <input name="email"
+                class="contact-form__field"
+                placeholder="name@mail.com"
+                autocomplete="off" v-model="email">
+        <input class="contact-form__field" name="city" placeholder="Ваш город" autocomplete="off" v-model="city">
+
+    </div>
+    <div class="contact-form__right-part">
+        <textarea name="message"
+                class="contact-form__area"
+                placeholder="Сообщение">
+        </textarea>
+    </div>
+
+    <button class="button contact-form__submit" type="submit">Отправить сообщение</button>
+    <p v-if="errors.length">
+        <b>Пожалуйста исправьте указанные ошибки:</b>
+        <ul>
+            <li v-for="error in errors">{{ error }}</li>
+        </ul>
+    </p>
+</form>

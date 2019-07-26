@@ -1,0 +1,20 @@
+.contacts {
+  padding-bottom: 90px;
+
+  @media(max-width: 1024px) {
+    padding-top: 30px;
+  }
+
+  @media(max-width: 768px) {
+    padding-bottom: 30px;
+  }
+
+  &__form{
+    margin-top: 5px;
+
+    @media(max-width: 1024px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

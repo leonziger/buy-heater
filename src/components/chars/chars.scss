@@ -93,7 +93,7 @@
     }
 
     &-link {
-      display: block;
+      display: none;
       color: #e77817;
       font-family: 'PT Sans', Arial, sans-serif;
       font-size: 14px;
@@ -106,9 +106,6 @@
     }
   }
 
-  &__spreadsheet{
-
-  }
 
   &-table {
     width: 100%;

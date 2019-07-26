@@ -1,0 +1,87 @@
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media(max-width: 1024px) {
+    width: 100%;
+    max-width: 600px;
+    justify-content: center;
+  }
+
+  &__left-part {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+
+    @media(max-width: 1024px) {
+      max-width: 600px;
+      margin-right: 0;
+    }
+  }
+
+  &__field,
+  &__area {
+    background-color: #fbddc7;
+    border: 3px solid #e77817;
+    color: #3e3939;
+    font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    &::-webkit-input-placeholder {
+      display: block!important;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    height: 59px;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+
+  &__area {
+    width: 100%;
+    height: 284px;
+    padding: 16px 20px;
+    resize: vertical;
+
+    @media(max-width: 768px) {
+      height: 150px;
+      resize: none;
+    }
+  }
+
+  &__right-part {
+    width: 100%;
+    max-width: 590px;
+
+    @media(max-width: 1024px) {
+      max-width: 600px;
+    }
+  }
+
+  &__submit {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 10px 45px;
+    background-color: #e77817;
+    color: #ffffff;
+    font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    opacity: 0.8;
+
+    @media(max-width: 1024px) {
+      margin-top: 30px;
+    }
+
+    @media(max-width: 420px) {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+
+}

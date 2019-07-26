@@ -11,5 +11,7 @@ $('[href^="#"]').click(function(){
     coordinates = $(link).offset().top-$('.main-header').height();
   }
 
+  if ( link === '#home') { coordinates = 0;}
+
   $('html, body').animate({scrollTop:coordinates}, 1000);
 });
