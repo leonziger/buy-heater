@@ -1,0 +1,15 @@
+.social-media{
+
+  &__item {
+    text-decoration: none;
+    padding: 4px 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media(max-width: 400px) {
+      padding: 4px 5px;
+    }
+  }
+}

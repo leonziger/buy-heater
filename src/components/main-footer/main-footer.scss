@@ -1,0 +1,114 @@
+.main-footer {
+  background-image: url(../images/footer_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 164px;
+  font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+
+  @media(max-width: 992px) {
+    min-height: 80px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media(max-width: 992px) {
+      align-items: center;
+    }
+
+    @media(max-width: 400px) {
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    &-desktop {
+      align-self: flex-start;
+
+      @media(max-width: 992px) {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      align-self: center;
+      display: none;
+
+      @media(max-width: 992px) {
+        display: block;
+      }
+
+      @media(max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts {
+    font-family: inherit;
+    display: flex;
+    padding-top: 6px;
+    padding-right: 237px;
+
+    @media(max-width: 1366px) {
+      padding-right: 0;
+    }
+
+    @media(max-width: 992px) {
+      padding-top: 0;
+    }
+
+    @media(max-width: 640px) {
+      display: none;
+    }
+
+    &-phone {
+      font-family: 'PT Sans', Arial, sans-serif;
+      color: #fff500;
+      font-size: 21px;
+      font-weight: 500;
+      text-decoration: none;
+      line-height: 28px;
+      margin-top: -4px;
+
+      &:hover {
+        color: #fff;
+      }
+
+      @media(max-width: 768px) {
+        color: #fff;
+      }
+
+      @media(max-width: 375px) {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 0;
+      }
+    }
+
+    &-phones {
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-slogan {
+      font-family: inherit;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+
+      @media(max-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+}

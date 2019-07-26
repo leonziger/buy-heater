@@ -1,0 +1,140 @@
+.main-header {
+  background-image: url(../images/header_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 75px;
+  padding-top: 10px;
+  font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+  font-weight: 500;
+  transition: $delay;
+
+  @media(max-width: 992px) {
+    min-height: 60px;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+
+    @media(max-width: 992px) {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    &-desktop {
+      align-self: flex-start;
+
+      @media(max-width: 992px) {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      align-self: center;
+      display: none;
+
+      @media(max-width: 992px) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    @media(max-width: 768px) {
+      display: flex;
+      padding-top: 60px;
+      width: 80%;
+      max-width: 400px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: #e77817;
+      transform: translateX(800px);
+      transition: .4s;
+      opacity: 0.8;
+    }
+
+    &.is-open {
+      transform: translateX(0);
+      z-index: 10;
+    }
+  }
+
+  &__contacts {
+    font-family: inherit;
+    display: flex;
+    padding-top: 7px;
+
+    @media(max-width: 1366px) {
+      padding-right: 0;
+    }
+
+    @media(max-width: 992px) {
+      padding-top: 0;
+    }
+
+    &-phone {
+      font-family: 'PT Sans', Arial, sans-serif;
+      color: #fff500;
+      font-size: 21px;
+      font-weight: 500;
+      text-decoration: none;
+      line-height: 28px;
+      margin-top: -4px;
+      
+      &:hover {
+        color: #fff;
+      }
+
+      @media(max-width: 768px) {
+        color: #fff;
+      }
+
+      @media(max-width: 375px) {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 0;
+      }
+    }
+
+    &-phones {
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-slogan {
+      font-family: inherit;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+
+      @media(max-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-toggle {
+    display: none;
+
+    @media(max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &_sticky {
+    background: darken(#00bff3, 5%);
+    min-height: 60px;
+  }
+
+}

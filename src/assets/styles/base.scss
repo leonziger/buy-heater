@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: none;
+}
+
+::placeholder {
+  font-size: 16px;
+  color: #23292e;
+  letter-spacing: 0.32px;
+
+  @media(max-width: 375px){
+    font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+input{
+  border: 0;
+  outline: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #141414;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  color: #677482;
+  background-color: #fffddc;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+hr {
+  border-top: 0;
+  border-color: #8c8c8c;
+}
+
+a {
+  color: #00a2ff;;
+  cursor: default;
+}
+
+a[href] {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+textarea {
+  resize: none;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: $delay;
+}
+
+
+h2 {
+  color: #e77817;
+  font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-bottom: 31px;
+
+  @media(max-width: 992px) {
+    text-align: center;
+  }
+
+  @media(max-width: 576px) {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+}
+
+.black {
+  color: #222120;;
+}
+
+.bg-green {
+  background-color: #bae0b2;
+}
