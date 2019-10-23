@@ -36,6 +36,11 @@
   }
 
   &__logo {
+
+    &-link {
+      display: block;
+    }
+
     &-desktop {
       align-self: flex-start;
 

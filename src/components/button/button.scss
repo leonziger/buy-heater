@@ -1,4 +1,5 @@
 .button {
+  background: linear-gradient(to bottom, #bdde89, #84c225);
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
@@ -13,6 +14,7 @@
   text-decoration: none;
   transition: $delay;
   background-color: transparent;
+
 
   &:hover {
     color: yellow;

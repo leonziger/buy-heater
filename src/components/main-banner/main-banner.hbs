@@ -22,42 +22,11 @@
                 </div>
             </div>
         </div>
-        <div class="countdown-timer">
-            <!--<ul class="countdown-timer__time" id="getting-started">-->
-                <!--<li class="countdown-timer__time-item">-->
-                    <!--<div class="countdown-timer__time-value" id="clock-days">00</div>-->
-                    <!--<div class="countdown-timer__time-text">дн.</div>-->
-                <!--</li>-->
-                <!--<li class="countdown-timer__time-item">-->
-                    <!--<div class="countdown-timer__time-value" id="clock-hours">00</div>-->
-                    <!--<div class="countdown-timer__time-text">час.</div>-->
-                <!--</li>-->
-                <!--<li class="countdown-timer__time-item">-->
-                    <!--<div class="countdown-timer__time-value" id="clock-minutes">00</div>-->
-                    <!--<div class="countdown-timer__time-text">мин.</div>-->
-                <!--</li>-->
-                <!--<li class="countdown-timer__time-item">-->
-                    <!--<div class="countdown-timer__time-value" id="clock-seconds">00</div>-->
-                    <!--<div class="countdown-timer__time-text">сек.</div>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <!--<script src="//megatimer.ru/get/01a7b26d35a65f6c96a578c9055164d9.js"></script>-->
-            <!--<div class="clock-builder-output clock"></div>-->
-            <!--<style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #2f2f2f; background-color: #f1f1f1; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #fff; box-shadow: none;} body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #fff; }</style>-->
-            <!--<script type="text/javascript">-->
-                <!--$(function(){-->
-                    <!--FlipClock.Lang.Custom = { days:'дни', hours:' часы', minutes:' минуты', seconds:' секунды' };-->
-                    <!--var opts = {-->
-                        <!--clockFace: 'DailyCounter',-->
-                        <!--countdown: true,-->
-                        <!--language: 'Custom'-->
-                    <!--};-->
-                    <!--var countdown = 1566477420 - ((new Date().getTime())/1000); // from: 08/22/2019 03:37 pm +0300-->
-                    <!--countdown = Math.max(1, countdown);-->
-                    <!--$('.clock-builder-output').FlipClock(countdown, opts);-->
-                <!--});-->
-            <!--</script>-->
-            <!--<button class="button countdown-timer__order-now">Заказать сейчас</button>-->
+        <div class="main-banner__timer">
+
+            {{> flip-countdown }}
+
+            <a href="#contacts" class="button main-banner__order-now">Заказать сейчас</a>
         </div>
         <div class="promo">
             <div class="container promo__container">

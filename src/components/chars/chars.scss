@@ -158,13 +158,17 @@
     }
 
     &-now {
-      background-image: url(../images/chars_btn.png);
+      box-shadow: 0 3px 7px 0 rgba(0,0,0, 0.33);
       color: #ffffff;
       font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
       font-size: 30px;
       font-weight: 500;
+      border-radius: 15px;
+      border: 4px solid #84c225;
       width: 282px;
       height: 67px;
+      transition: 0.3s;
+
     }
   }
   

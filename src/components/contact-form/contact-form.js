@@ -1,36 +1,97 @@
-import Vue from 'vue/dist/vue.esm';
+import $ from 'jquery';
 
-const app = new Vue({
-    el: '#app',
-    data: {
-        errors: [],
-        name: null,
-        phone: null,
-        email: null,
-        city: null
-    },
-    methods: {
-        checkForm: function (e) {
-            if (this.name && this.phone && this.email && this.city) {
-                return true;
-            }
+import 'jquery.maskedinput/src/jquery.maskedinput';
+import 'jquery-validation/dist/jquery.validate';
+import 'jquery-validation/dist/localization/messages_ru';
 
-            this.errors = [];
+import {openThanksModal} from "../thanks/thanks";
 
-            if (!this.name) {
-                this.errors.push('Требуется указать имя.');
-            }
-            if (!this.phone) {
-                this.errors.push('Требуется указать телефон.');
-            }
-            if (!this.email) {
-                this.errors.push('Требуется указать email.');
-            }
-            if (!this.city) {
-                this.errors.push('Требуется указать город.');
-            }
-
-            e.preventDefault();
-        }
+$.validator.addMethod('condition', function(value, element, condition) {
+    if (typeof condition !== 'function') {
+        throw new Error('"condition" rule must return a function');
     }
-})
+
+    return this.optional(element) || condition(value);
+});
+
+
+const cbForm = $('.contact-form');
+const phone = $('[name="phone"]');
+const fieldErrorClassName = 'contact-form__field-error';
+const fieldValidClassName = 'contact-form__field-valid';
+
+phone.mask('+380 (99) 999-99-99', { autoclear: false });
+
+cbForm.validate({
+    rules: {
+        name: {
+            required: true,
+            condition: () => (value) => {
+                const expression = new RegExp(/^[а-яА-ЯёЁ\s]+$/);
+                    if(expression.test(value)) {
+                        return expression.test(value);
+                    };
+                },
+            minlength: 3
+        },
+        phone: {
+            required: true,
+            condition: () => (value) => value.indexOf('_') === -1
+        },
+        email: {
+            required: true,
+            condition: () => (value) => {
+                const expression = new RegExp(/^([a-zA-Z0-9_-]+\.)*[a-zA-Z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/);
+                return expression.test(value);
+            }
+        }
+    },
+
+    messages: {
+        name: {
+            condition: 'Пожалуйста, введите Ваше имя по-русски.'
+        },
+        email: {
+            condition: 'Пожалуйста, введите правильный адрес Вашей электронной почты.'
+        },
+        phone: {
+            condition: 'Пожалуйста, введите правильный номер Вашего телефона.'
+        }
+    },
+
+    highlight: (element) => {
+        $(element).addClass(fieldErrorClassName).removeClass(fieldValidClassName);
+    },
+
+    unhighlight: (element) => {fieldErrorClassName
+        $(element).removeClass(fieldErrorClassName).addClass(fieldValidClassName);
+    },
+
+    errorPlacement: function(error, element) {
+        error.addClass('contact-form__error-message');
+        error.insertAfter(element);
+    },
+
+    submitHandler: function(form) {
+        const cbData = cbForm.serializeArray().reduce((result, item) => {
+            result[item.name] = item.value;
+            return result;
+        }, {});
+
+
+        $.post('mail.php', cbData).done(function(response) {
+            console.log(response);
+            openThanksModal();
+            cbForm.trigger('reset');
+        });
+
+    },
+
+    invalidHandler: function() {
+
+        setTimeout(function() {
+            $('select').trigger('refresh');
+        }, 1);
+
+    }
+});

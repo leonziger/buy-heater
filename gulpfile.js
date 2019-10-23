@@ -16,7 +16,6 @@ const uglify = require('gulp-uglify');
 const panini = require('panini');
 const htmlmin = require('gulp-htmlmin');
 const isDevelopment = process.env.NODE_ENV !== 'production';
-const browserify = require("browserify");
 const babelify = require("babelify");
 
 gulp.task('views', function() {

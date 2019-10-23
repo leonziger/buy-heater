@@ -8,6 +8,48 @@
   @media(max-width: 768px) {
     margin-top: 95px;
   }
+
+  &__timer {
+    padding: 48px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media(max-width: 1200px) {
+      flex-direction: column;
+      padding: 100px 0;
+    }
+
+    @media(max-width: 768px) {
+      margin-top: 50px;
+    }
+  }
+
+  &__order-now {
+    box-shadow: 0 3px 7px 0 rgba(0,0,0, 0.33);
+    color: #ffffff;
+    font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    width: 453px;
+    height: 107px;
+    border: 6px solid #84c225;
+    border-radius: 25px;
+    transition: 0.3s;
+
+
+    @media(max-width: 1200px) {
+      margin-top: 50px;
+    }
+
+    @media(max-width: 992px) {
+      border-radius: 15px;
+      border: 3px solid #84c225;
+      width: 282px;
+      height: 67px;
+      font-size: 30px;
+    }
+  }
 }
 
 .buy-heater {
@@ -243,72 +285,6 @@
       }
     }
 
-  }
-}
-
-.countdown-timer {
-  height: 183px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  &__time {
-    display: flex;
-    align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-
-    &-item {
-      width: 85px;
-      height: 100px;
-      box-shadow: -3px 5px 16px rgba(0, 0, 0, 0.09);
-      background-color: #ffffff;
-      margin-left: 10px;
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      @media(max-width: 440px) {
-        width: 60px;
-        height: 90px;
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-    }
-
-    &-value {
-      display: flex;
-      color: #43aa26;
-      font-family: 'Cuprum', sans-serif;
-      font-size: 56px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 20px;
-
-      @media(max-width: 440px) {
-        font-size: 48px;
-      }
-    }
-
-    &-text {
-      display: flex;
-      color: #2f3131;
-      font-family: 'Roboto', sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-    }
-  }
-
-  &__order-now {
-    background-image: url(../images/timer_btn.png);
-    color: #ffffff;
-    font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 500;
-    width: 453px;
-    height: 107px;
   }
 }
 

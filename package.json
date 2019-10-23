@@ -44,12 +44,14 @@
     "panini": "^1.6.3"
   },
   "dependencies": {
-    "flipclock": "^0.10.8",
+    "flipclock": "github:objectivehtml/FlipClock#js-es6",
     "gulp-htmlmin": "^5.0.1",
     "jquery": "^3.3.1",
     "jquery-countdown": "^2.2.0",
+    "jquery-form-styler": "^2.0.2",
+    "jquery-validation": "^1.19.1",
+    "jquery.maskedinput": "^1.4.1",
     "vanilla-text-mask": "^5.1.1",
-    "vex-js": "^4.1.0",
-    "vue.js": "^0.3.2"
+    "vex-js": "^4.1.0"
   }
 }

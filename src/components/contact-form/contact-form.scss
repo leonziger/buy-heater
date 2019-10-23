@@ -40,6 +40,18 @@
     height: 59px;
     margin-bottom: 16px;
     padding: 20px;
+
+    &-error {
+      border: 3px solid black;
+    }
+
+    &-valid {
+      border: 3px solid #e77817;
+    }
+  }
+
+  &__select {
+    padding: 5px 20px;
   }
 
   &__area {
@@ -64,15 +76,15 @@
   }
 
   &__submit {
+    background: #e77817;
     margin-top: 10px;
     margin-bottom: 25px;
     padding: 10px 45px;
-    background-color: #e77817;
     color: #ffffff;
     font-family: 'PF Din Text Cond Pro', Arial, sans-serif;
     font-size: 30px;
     font-weight: 500;
-    opacity: 0.8;
+    transition: 0.3s;
 
     @media(max-width: 1024px) {
       margin-top: 30px;
@@ -84,4 +96,15 @@
     }
   }
 
+  &__errors {
+    width: 100%;
+  }
+
+  &__error-message {
+    display: block;
+    font-size: 16px;
+    margin: -15px 0 15px 10px;
+    color: red;
+
+  }
 }
